@@ -28,8 +28,4 @@ app.add_handler(CommandHandler("modocaos", modocaos))
 
 PORT = int(os.environ.get("PORT", 10000))
 
-app.run_webhook(
-    listen="0.0.0.0",
-    port=PORT,
-    webhook_url=f"https://SEU-NOME-DO-APP.onrender.com/{TOKEN}"
-)
+app.run_polling()
